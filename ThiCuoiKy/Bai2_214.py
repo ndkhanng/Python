@@ -1,5 +1,6 @@
 import math
 
+# Hàm kiểm tra số nguyên tố
 def la_so_nguyen_to(n):
     if n < 2:
         return False
@@ -11,6 +12,7 @@ def la_so_nguyen_to(n):
     return True
 
 
+# Hàm đếm số nguyên tố nhỏ hơn n
 def dem_so_nguyen_to(n):
     dem = 0
 
@@ -21,6 +23,7 @@ def dem_so_nguyen_to(n):
     return dem
 
 
+# Hàm liệt kê các ước số nguyên tố của n
 def uoc_so_nguyen_to(n):
     ds = []
 
@@ -31,15 +34,19 @@ def uoc_so_nguyen_to(n):
     return ds
 
 
+# ===== Chương trình chính =====
 n = int(input("Nhập số nguyên dương n: "))
 
+# Câu a
 if la_so_nguyen_to(n):
     print(n, "là số nguyên tố")
 else:
     print(n, "không phải là số nguyên tố")
 
+# Câu b
 print("Số lượng số nguyên tố nhỏ hơn", n, "là:", dem_so_nguyen_to(n))
 
+# Câu c
 print("Các ước số nguyên tố của", n, "là:")
 
 for x in uoc_so_nguyen_to(n):

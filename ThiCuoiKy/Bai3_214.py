@@ -1,5 +1,8 @@
 import math
 
+# ==========================
+# a) Kiểm tra số chính phương
+# ==========================
 
 is_square = lambda n: int(math.sqrt(n)) ** 2 == n
 
@@ -11,12 +14,15 @@ else:
     print(n, "không phải là số chính phương")
 
 
+# ==========================
+# b) Kiểm tra loại tam giác
+# ==========================
 
 a = int(input("Nhập cạnh a: "))
 b = int(input("Nhập cạnh b: "))
 c = int(input("Nhập cạnh c: "))
 
-
+# Kiểm tra tam giác hợp lệ
 is_triangle = lambda a, b, c: a + b > c and a + c > b and b + c > a
 
 if not is_triangle(a, b, c):
